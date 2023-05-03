@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { Routes, Route } from "react-router-dom"
 import Home from "./pages/Home";
 import Header from "./components/Header";
 import NotFound from "./pages/NotFound";
@@ -8,22 +9,27 @@ import DogNew from "./pages/DogNew";
 import DogShow from "./pages/DogShow";
 import Footer from "./components/Footer";
 import './App.css'
+import mockDogs from "./mockDogs"
 
 
 const App = () => {
+  const [dogs, setDogs] = useState(mockDogs)
 
-  const [dogs, setDogs] = useState()
+  console.log(dogs)
 
-  return(
+
+  return (
 
     <>
       <Header />
-      <Home />
-      <DogIndex />
-      <DogShow />
-      <DogNew />
-      <DogEdit />
-      <NotFound />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/dogindex" element={<DogIndex />} />
+          <Route path="/dogshow" element={<DogShow />} />
+          <Route path="/dognew" element={<DogNew />} />
+          <Route path="/dogedit" element={<DogEdit />} />
+          <Route path="*" element={<NotFound />} />
+        </Routes>
       <Footer />
     
     </>
