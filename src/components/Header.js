@@ -6,7 +6,7 @@ const Header = () => {
     return(
 
         <>
-            <h3>Meet the Dogs</h3>
+            <header>Meet the Dogs</header>
         
         </>
 
