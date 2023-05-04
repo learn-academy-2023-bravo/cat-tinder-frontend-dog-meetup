@@ -5,17 +5,9 @@ body {
   background-size: cover;
 }
 
-header {
-  font-family: "Kenzo";
-  font-size: 1.3rem;
-  font-weight: 600;
-  
-
-}
-
-
 h1 {
   text-align: center;
+  margin-bottom: 50%;
 }
 
 h2 {
@@ -27,18 +19,46 @@ header {
   position: fixed;
   top: 0;
   width: 100%;
-  background-color: #383838;
+  background-color: #000000;
   color: #fff;
   text-align: center;
   padding: 10px;
+  font-family: "Kenzo";
+  font-size: 1.3rem;
+  font-weight: 600;
 }
 
 footer {
   position: fixed;
   bottom: 0;
   width: 100%;
-  background-color: #383838;
+  background-color: #000000;
   color: #fff;
   text-align: center;
   padding: 10px;
+}
+
+main {
+  text-align: center;
+  
+}
+
+.card-container {
+  display: flex;
+  padding-top: 7%;
+  justify-content: left;
+  align-items: center;
+  
+}
+
+.home-center {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.logo {
+  max-width: 60%;
 }
