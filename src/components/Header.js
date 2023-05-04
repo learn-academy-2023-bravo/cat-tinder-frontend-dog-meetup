@@ -10,7 +10,7 @@ const Header = () => {
         <Link to="/DogNew" style={linkStyle}>
           <h3>🐾 Add a New Dog 🐾</h3>
         </Link>
-        <Link to="/Home" style={linkStyle}>
+        <Link to="/" style={linkStyle}>
           <h3>🏠 Home 🏠</h3>
         </Link>
       </nav>
