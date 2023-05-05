@@ -13,8 +13,8 @@ const DogIndex = ({dogs}) => {
               color="black"
               style={{
                 width: '18rem'
-                
               }}
+              key={index}
             >
               <img
                 alt="Sample"

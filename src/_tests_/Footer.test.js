@@ -10,7 +10,7 @@ describe("<Footer/>", () => {
             (<Footer/>)
             </BrowserRouter>
         )
-        const footerLink = screen.getByText(/This is the footer/i)
+        const footerLink = screen.getByText(/created by apple & nikki/i)
         expect(footerLink).toBeInTheDocument()
     })
 
@@ -24,7 +24,7 @@ describe("<Footer/>", () => {
 
         // Act
         // set up section action
-        userEvent.click(screen.getByText("This is the footer"))
-        expect(screen.getByText("This is the footer")).toBeInTheDocument()
+        userEvent.click(screen.getByText("Created by Apple & Nikki", { exact: false }))
+        expect(screen.getByText("Created by Apple & Nikki")).toBeInTheDocument()
     })
 }) 
