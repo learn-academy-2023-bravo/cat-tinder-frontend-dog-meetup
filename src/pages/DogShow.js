@@ -13,6 +13,7 @@ const DogShow = ({dogs}) => {
                 <img
                 alt = 'dog pic'
                 src = {selectedDog.image}
+                style={{height: "550px", width: "720px"}}
                 />
 
                 <h3>

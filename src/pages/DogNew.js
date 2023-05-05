@@ -22,9 +22,10 @@ const DogNew = ({ createDog }) => {
 
   return (
     <>
-      <Form>
+
+      <Form style={{ marginTop: 200, width: "500px", margin: "auto", paddingTop: "200px" }}>
         <FormGroup>
-          <Label for="dog-name">Name</Label>
+          <Label for="dog-name" style={{fontFamily: "Kenzo", fontSize: "1.5rem"}}>Name</Label>
           <Input
             id="dog-name"
             name="name"
@@ -32,11 +33,12 @@ const DogNew = ({ createDog }) => {
             type="text"
             onChange={handleChange}
             value={newDog.name}
+            style={{ width: "400px", height: "30px", margin: "auto"}}
           />
         </FormGroup>
 
         <FormGroup>
-          <Label for="dog-age">Age</Label>
+          <Label for="dog-age" style={{fontFamily: "Kenzo", fontSize: "1.5rem"}}>Age</Label>
           <Input
             id="dog-age"
             name="age"
@@ -44,11 +46,12 @@ const DogNew = ({ createDog }) => {
             type="text"
             onChange={handleChange}
             value={newDog.name}
+            style={{ width: "400px", height: "30px", margin: "auto" }}
           />
         </FormGroup>
 
         <FormGroup>
-          <Label for="dog-enjoys">Enjoys</Label>
+          <Label for="dog-enjoys" style={{fontFamily: "Kenzo", fontSize: "1.5rem"}}>Enjoys</Label>
           <Input
             id="dog-enjoys"
             name="enjoys"
@@ -56,11 +59,12 @@ const DogNew = ({ createDog }) => {
             type="text"
             onChange={handleChange}
             value={newDog.name}
+            style={{ width: "400px", height: "30px", margin: "auto" }}
           />
         </FormGroup>
 
         <FormGroup>
-          <Label for="dog-image">Image</Label>
+          <Label for="dog-image" style={{fontFamily: "Kenzo", fontSize: "1.5rem"}}>Image</Label>
           <Input
             id="dog-image"
             name="image"
@@ -68,10 +72,11 @@ const DogNew = ({ createDog }) => {
             type="text"
             onChange={handleChange}
             value={newDog.name}
+            style={{ width: "400px", height: "30px", margin: "auto" }}
           />
         </FormGroup>
 
-        <Button onClick={handleClick}>Add</Button>
+        <Button style={{ margin: "auto", display: "block", backgroundColor: "black", fontFamily: "Kenzo", padding: "10px 20px", fontSize: "1.5rem"}}onClick={handleClick}>Add</Button>
       </Form>
     </>
   );

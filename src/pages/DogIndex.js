@@ -5,14 +5,14 @@ const DogIndex = ({dogs}) => {
 
   return(
     <main>
-      <h1 style={{textAlign: 'center', position: 'absolute', top: '10%', left: '50%', transform: 'translate(-50%, -50%)', zIndex: '1', fontFamily: "Bebas", color: "yellow"}}>Dogs Looking For Companions!</h1>
-      <div className="card-container" style={{paddingTop: '110px'}}>
+      <h1 style={{textAlign: 'center', position: 'absolute', top: '10%', left: '50%', transform: 'translate(-50%, -50%)', zIndex: '1', fontFamily: "Bebas", color: "yellow", paddingTop: '20px'}}>Dogs Looking For Companions!</h1>
+      <div className="card-container" style={{paddingTop: '110px', display: 'flex', justifyContent: 'center', alignItems: 'center', paddingTop: '110px'}}>
         {dogs?.map((dog, index) => {
           return(
             <Card
               color="black"
               style={{
-                width: '18rem'
+                width: '18rem',
               }}
               key={index}
             >
@@ -46,11 +46,11 @@ const DogIndex = ({dogs}) => {
 
 const linkStyle = {
   color: "pink",
-  fontSize: "1.2rem",
+  fontSize: "1rem",
   textDecoration: "none",
-  margin: "0 1rem",
   transition: "all 0.2s ease-in-out",
-  fontFamily: "Kenzo"
+  fontFamily: "Kenzo",
+  textAlign: "center"
 };
 
 

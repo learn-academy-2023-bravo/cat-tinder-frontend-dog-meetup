@@ -1,8 +1,14 @@
 import { Link } from "react-router-dom";
+import logo from '../pages/logo1.png'
 
 const Header = () => {
   return (
     <header>
+       <div style={{position: 'fixed', top: 0}}>
+      <a href="/">
+        <img src={logo} alt="Logo" height="50" />
+      </a>
+    </div>
       <nav style={{ display: "flex", justifyContent: "center" }}>
         <Link to="/DogIndex" style={linkStyle}>
           <h3>🐶 Meet the Dogs 🐶</h3>
