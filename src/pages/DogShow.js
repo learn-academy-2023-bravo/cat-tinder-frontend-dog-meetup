@@ -1,4 +1,5 @@
-import { useParams } from "react-router-dom"
+import { useParams, NavLink } from "react-router-dom"
+
 
 
 
@@ -20,6 +21,11 @@ const DogShow = ({dogs}) => {
                 </h3>
                 </>
             )}
+            <div>
+                <NavLink to={`/dogedit/${selectedDog.id}`} className= "nav-link">
+                   Edit Dog Profile
+                </NavLink>
+            </div>
         </main>
     )
 }
