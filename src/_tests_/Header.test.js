@@ -21,10 +21,13 @@ describe("<Header/>", () => {
             (<Header/>)
             </BrowserRouter>
         )
-
+            screen.logTestingPlaygroundURL()
         // Act
         // set up section action
-        userEvent.click(screen.getByText("Meet the Dogs"))
-        expect(screen.getByText("Meet the Dogs")).toBeInTheDocument()
+        userEvent.click(screen.getByRole('heading', {
+            name: /🐶 meet the dogs 🐶/i
+          }))
+
+        expect(screen.getByText("🐶 Meet the Dogs 🐶")).toBeInTheDocument()
     })
-}) 
+})
