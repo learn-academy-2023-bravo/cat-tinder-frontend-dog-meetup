@@ -14,19 +14,32 @@ h2 {
   text-align: center;
 }
 
+h3 {
+  padding-top: 20px;
+  font-family: "Kenzo";
 
-header {
+
+}
+
+
+header, nav {
   position: fixed;
-  top: 0;
-  width: 100%;
   background-color: #000000;
   color: #fff;
-  text-align: center;
-  padding: 10px;
   font-family: "Kenzo";
   font-size: 1.3rem;
   font-weight: 600;
   z-index: 100;
+  justify-content: space-between;
+  align-items: center;
+  background-color: black;
+  color: white;
+  position: fixed;
+  height: 50px ;
+  top: 0;
+  left: 0;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 footer {
@@ -40,21 +53,57 @@ footer {
   font-family: "Kenzo";
 }
 
+.main-title {
+  text-align: center;
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+  font-family: "Bebas";
+  color: yellow;
+  padding-top: 20px;
+}
+
 main {
   text-align: center;
   
 }
 
+.input {
+  width: 400px;
+  height: 30px;
+  margin: auto;
+}
+
+.form {
+  z-index: 2;
+}
+
+.label {
+  font-family: Kenzo;
+  font-size: 1.5rem;
+}
+
 .card-container {
+  padding-top: 110px;
   display: flex;
-  padding-top: 7%;
-  justify-content: left;
+  justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-  align-content: flex-start;
-  padding-bottom: 5%;
-  
-  
+}
+
+.button {
+  margin: auto;
+  display: block;
+  background-color: black;
+  font-family: Kenzo;
+  padding: 10px 20px;
+  font-size: 1.5rem;
+}
+
+.button:hover {
+  background-color: rgb(202, 6, 202);
 }
 
 .home-center {
@@ -63,6 +112,28 @@ main {
   justify-content: center;
   align-items: center;
   height: 100vh;
+}
+
+.logo1 {
+  position: absolute;
+  z-index: 999;
+  transition: transform 0.3s ease-in-out;
+}
+
+@keyframes bounce {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.logo1:hover {
+  animation: bounce 0.5s infinite
 }
 
 .logo {
@@ -97,25 +168,28 @@ main {
   border-radius: 10px;
   overflow: hidden;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+.card-title {
+  color: white;
+  font-family: "Bebas Neue";
+  font-size: 1.8rem;
+
+}
+
+.card-subtitle {
+  color: white;
+  font-family: "Bebas Neue";
+  padding-bottom: 50%;
 }
 
 .card:hover .card-content {
   transform: rotateY(180deg);
-}
-
-.card-content {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  transform-style: preserve-3d;
-  transition: transform 0.5s;
-  backface-visibility: hidden;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding: 20px;
-  box-sizing: border-box;
 }
 
 .card-front,
@@ -133,11 +207,89 @@ main {
   transform: rotateY(180deg);
 }
 
-.card img {
-  width: 100%;
+.card-img {
   height: 200px;
   object-fit: cover;
 }
 
+.card-link {
+  color: pink;
+  font-size: 1rem;
+  text-decoration: none;
+  transition: all 0.2s ease-in-out;
+  font-family: "Kenzo";
+  text-align: center;
+}
 
+.card-link:hover {
+  color: white;
+}
+
+.card-body {
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.dog-image {
+  height: 550px;
+  width: auto;
+  max-width: 100%;
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.nav-link {
+  color: white;
+  font-size: 1.2rem;
+  text-decoration: none;
+  margin: 0 1rem;
+  transition: all 0.2s ease-in-out;
+  align-items: center;
+}
+
+.nav-link:hover {
+  color: rgb(255, 251, 6);
+  display: inline-block;
+  animation: bounce 0.5s infinite;
+}
+
+@keyframes bounce {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+
+
+.container {
+  display: flex;
+  top: 20px;
+  margin-top: 10rem ;
+  align-items: center;
+  justify-content: center;
+}
+
+.iphone {
+  position: absolute;
+  left: 650px;
+  bottom: 50px;
+  width: 100%;
+  margin-bottom: 1rem;
+  max-width: 400px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  position: fixed;
+}
 

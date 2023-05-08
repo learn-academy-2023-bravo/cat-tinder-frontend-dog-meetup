@@ -32,7 +32,7 @@ const mockDogs = [
         name: 'Pawl Barkerson (M)',
         age: "10yrs old",
         enjoys: "sleeping the day away.",
-        image: 'https://i0.wp.com/www.featureshoot.com/wp-content/uploads/2014/10/Pete_Thorne_01.jpg?fit=620%2C868&ssl=1'
+        image: 'https://i.natgeofe.com/n/56781ecf-e31b-4528-b412-6d67509aae4e/55739_3x2.jpg'
       },
       {
         id: 6,
