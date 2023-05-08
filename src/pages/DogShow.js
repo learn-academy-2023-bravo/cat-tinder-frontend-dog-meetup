@@ -5,7 +5,7 @@ import { useParams, NavLink } from "react-router-dom"
 
 const DogShow = ({dogs}) => {
     const { id } = useParams()
-    let selectedDog = dogs.find(dog => dog.id === +id)
+    let selectedDog = dogs?.find(dog => dog.id === +id)
 
     return (
         <main>
