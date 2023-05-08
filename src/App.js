@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { Routes, Route } from "react-router-dom"
 import Home from "./pages/Home";
 import Header from "./components/Header";
@@ -13,15 +13,53 @@ import mockDogs from "./mockDogs"
 
 
 const App = () => {
-  const [dogs, setDogs] = useState(mockDogs)
 
-  const createDog = (createdDog) => {
-    console.log("created dog:", createdDog)
+
+  const [dogs, setDogs] = useState([])
+
+
+
+  useEffect(() => {
+    readDog()
+  }, [])
+
+
+
+  const readDog = () => {
+    fetch('http://localhost:3000/dogs')
+    .then(response => response.json())
+    .then(payload => {
+      setDogs(payload)
+    })
+    .catch(error => console.log("dog read errors", error))
   }
 
-  const updateDog = (dog, id) => {
-    console.log("dog: ", dog)
-    console.log("id: ", id)
+
+
+  const createDog = (createdDog) => {
+    fetch('http://localhost:3000/dogs', {
+      body: JSON.stringify(createdDog),
+      headers: {
+        "Content-Type": "application/json"
+      },
+      method: "POST"
+    })
+    .then(response => response.json())
+    .then(() => readDog())
+    .catch(error => console.log("Create dog errors: ", error))
+  }
+
+  const updateDog = (selectedDog, id) => {
+    fetch(`http://localhost:3000/dogs/${id}`, {
+      body: JSON.stringify(selectedDog),
+      headers: {
+        "Content-Type": "application/json"
+      },
+      method: "PATCH"
+    })
+    .then(response => response.json())
+    .then(() => readDog())
+    .catch(error => console.log("Updated dog errors:", error))
   }
 
   return (
