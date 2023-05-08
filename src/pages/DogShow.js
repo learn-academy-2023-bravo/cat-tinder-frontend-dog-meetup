@@ -10,6 +10,7 @@ import { useParams, NavLink } from "react-router-dom"
             {selectedDog && (
                 <>
                 <img
+                className='dog-image'
                 alt = 'dog pic'
                 src = {selectedDog.image}
                 />
