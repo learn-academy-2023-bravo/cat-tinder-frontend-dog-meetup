@@ -29,9 +29,11 @@ const DogEdit = ({ dogs, updateDog }) => {
     return(
 
         <>
-    <Form>
+    <h1 className="main-title">Edit your dog!</h1>
+    <div className="container">
+    <Form className="form">
         <FormGroup>
-            <Label for="name">Name</Label>
+            <Label for="name" className="label">Name</Label>
             <Input 
             id= "dog-name"
             name="name"
@@ -41,7 +43,7 @@ const DogEdit = ({ dogs, updateDog }) => {
              />
         </FormGroup>
         <FormGroup>
-            <Label for="age">Age</Label>
+            <Label for="age" className="label">Age</Label>
             <Input 
             id= "dog-age"
             name="age"
@@ -51,7 +53,7 @@ const DogEdit = ({ dogs, updateDog }) => {
              />
         </FormGroup>
         <FormGroup>
-            <Label for="enjoys">Enjoys</Label>
+            <Label for="enjoys" className="label">Enjoys</Label>
             <Input 
             id= "dog-enjoys"
             name="enjoys"
@@ -61,7 +63,7 @@ const DogEdit = ({ dogs, updateDog }) => {
              />
         </FormGroup>
         <FormGroup>
-            <Label for="image">Image URL</Label>
+            <Label for="image" className="label">Image URL</Label>
             <Input 
             id= "dog-image"
             name="image"
@@ -70,10 +72,11 @@ const DogEdit = ({ dogs, updateDog }) => {
             type="text" 
              />
         </FormGroup>
-        <Button onClick={handleSubmit} name="submit">
+        <Button className="button" onClick={handleSubmit} name="submit">
             Submit Updates
         </Button>
     </Form>
+    </div>
         </>
     )
 }
